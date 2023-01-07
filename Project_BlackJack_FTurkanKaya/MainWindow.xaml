@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_BlackJack_FTurkanKaya"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Blackjack_Project_F.Turkan_Kaya" Height="450" Width="800">
     <Grid>
         <Grid x:Name="Window" Loaded="Window_Loaded">
             <Grid.Background>
@@ -29,14 +29,14 @@
             <Label Content="Speler" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="35" FontSize="26" FontFamily="Perpetua Titling MT" FontWeight="Bold" Margin="0,30,0,0" Grid.Column="1"/>
             <ListBox x:Name="LbxSpeler"  Width="103" HorizontalAlignment="Left" Height="120" Grid.Column="1" VerticalAlignment="Top" BorderBrush="#FFED1414" FontSize="10" Grid.Row="1" Margin="12,0,0,0"/>
             <TextBlock x:Name="TxtScoreSpeler" TextWrapping="Wrap" Height="60" Width="81" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="12,132,0,0" Grid.Row="1" Grid.Column="1"/>
-            <Image Name="ImageSpeler" Stretch="UniformToFill" Height="105" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Margin="120,0,0,0" Grid.Column="1" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1"/>
+            <Image Name="ImageSpeler" Stretch="UniformToFill" Height="125" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="120,0,0,0" Grid.Column="1" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1"/>
 
             <Label Content="Bank" Foreground="Black" Width="92" Height="35" FontSize="26" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Perpetua Titling MT" Grid.Column="2" Margin="115,30,0,0"/>
             <ListBox x:Name="LbxBank" BorderBrush="#FFED1414" Width="103
                      " Height="120" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="170,0,0,0" FontSize="10" Grid.Row="1" Grid.ColumnSpan="2"/>
 
 
-            <TextBlock x:Name="TxtScoreBank" TextWrapping="Wrap" Height="55" Width="73" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Grid.Column="2" Margin="182,135,0,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="TxtScoreBank" TextWrapping="Wrap" Height="55" Width="61" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Grid.Column="2" Margin="206,135,0,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -49,7 +49,7 @@
 
 
 
-            <Button x:Name="BtnStand"  Content="Stand" Height="28" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnStand_Click" Grid.Column="3" Margin="181,171,0,0" Grid.Row="1" FontWeight="Bold"/>
+            <Button x:Name="BtnStand"  Content="Stand" Height="28" Width="82" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnStand_Click" Grid.Column="3" Margin="180,168,0,0" Grid.Row="1" FontWeight="Bold"/>
             <Button x:Name="BtnHit" Content="Hit" Height="28" Width="88" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnHit_Click" Grid.Column="3" Margin="15,168,0,0" Grid.Row="1" FontWeight="Bold"/>
             <Button x:Name="BtnDeel" Content="Delen" Height="28" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnDeel_Click" Grid.Column="3" Margin="0,111,0,0" Grid.Row="1" FontWeight="Bold"/>
             <Button x:Name="BtnNieuwSpeel" Content="Nieuw Speel" Height="35" Width="94" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BtnNieuwSpeel_Click" Grid.Column="3" Margin="93,17,0,0" Grid.Row="2" FontWeight="Bold" RenderTransformOrigin="0.347,-0.27"/>
@@ -69,9 +69,9 @@
             <Label x:Name="LblTijdstip" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="12,8,0,6" Grid.Row="3" Width="80" FontWeight="Bold" FontSize="16"/>
             <Label x:Name="LblStatus" Content="" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="103,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="32" Width="448" RenderTransformOrigin="-0.007,0.114" MouseDoubleClick="LblStatus_MouseDoubleClick" FontWeight="Bold" FontSize="16"/>
             <Button x:Name="BtnDouble" Grid.Column="3" Content="Double-Down" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Height="33" Width="92" FontWeight="Bold" Click="BtnDouble_Click"/>
-            <Image x:Name="ImageDouble" Stretch="UniformToFill" Height="105" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="78,125,0,0" Grid.Column="2" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1" Grid.RowSpan="2"/>
+            <Image x:Name="ImageDouble" Stretch="UniformToFill" Height="125" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="61,141,0,0" Grid.Column="2" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1" Grid.RowSpan="2"/>
 
-            <Image x:Name="ImageBank" Stretch="UniformToFill" Height="105" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="78,2,0,0" Grid.Column="2" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1"/>
+            <Image x:Name="ImageBank" Stretch="UniformToFill" Height="125" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="61,2,0,0" Grid.Column="2" Source="/NewFolder/Speelkaarten.jpg" Grid.Row="1"/>
 
         </Grid>
 

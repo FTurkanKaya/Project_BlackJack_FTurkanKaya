@@ -1,0 +1,16 @@
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\bin\Debug\Project_BlackJack_FTurkanKaya.exe.config
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\bin\Debug\Project_BlackJack_FTurkanKaya.exe
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\bin\Debug\Project_BlackJack_FTurkanKaya.pdb
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.csproj.AssemblyReference.cache
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.csproj.SuggestedBindingRedirects.cache
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\MainWindow.g.cs
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\App.g.cs
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya_MarkupCompile.cache
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya_MarkupCompile.lref
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\MainWindow.baml
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.g.resources
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.Properties.Resources.resources
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.csproj.GenerateResource.cache
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.csproj.CoreCompileInputs.cache
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.exe
+C:\Users\onayk\Desktop\Türkan PXL\werkpleren\Project\c#\Project_BlackJack_FTurkanKaya\Project_BlackJack_FTurkanKaya\obj\Debug\Project_BlackJack_FTurkanKaya.pdb

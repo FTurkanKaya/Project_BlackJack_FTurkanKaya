@@ -23,26 +23,18 @@ namespace Project_BlackJack_FTurkanKaya
     /// </summary>
     public partial class MainWindow : Window
     {
-        int speler;
+       
         int speler1;
-        int hit;
-        int stand;
-        int standWaarde;
-        int bankWaarde;
-        int hitWaarde;
-        int bank;
         int kaarten;
         int kapitaal;
-        int inzet;
-        int spelerWaarde;
+        int inzet;      
         int speler1Waarde;
         int waarde;
         int aantalKaarten;
         int round = 0;
         int gewonnenBedragSpeler;
-        int gewonnenBedragBank;
-        string nieuweKaart;
-        Boolean geenKaartSpeler, geenKaartSpeler1, geenKaartBank, geenKaartHit, geenKaartStand;
+        int gewonnenBedragBank;      
+        Boolean geenKaartSpeler; 
 
 
         int somBank;
@@ -57,21 +49,11 @@ namespace Project_BlackJack_FTurkanKaya
 
         private DispatcherTimer klok, timerDeelkaart;
 
-        List<string> gebruiktKaarten = new List<string>();
-        List<string> cardsSchoppen = new List<string>();
-        List<string> cardsKlaveren = new List<string>();
-        List<string> cardsHarten = new List<string>();
-        List<string> cardsRuiten = new List<string>();
-
+        List<string> gebruiktKaarten = new List<string>();       
         List<string> soortKaart = new List<string>() { "Schoppen", "Klaveren", "Harten", "Ruiten" };
         List<string> nummerKaart = new List<string>() { "Aas", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Boer", "Dame", "Koning" };
         List<string> speelKaarten = new List<string>();
-
-
-
-        private Dictionary<string, int> kaartWaarde;
         List<string> kaartenHistoric = new List<string>();
-
         List<string> kaartSource = new List<string>()
         {
 
@@ -130,8 +112,6 @@ namespace Project_BlackJack_FTurkanKaya
 
         };
 
-
-
         ListBoxItem kaartenList = new ListBoxItem();
 
         private Dictionary<string, string> kaartImage;
@@ -159,30 +139,22 @@ namespace Project_BlackJack_FTurkanKaya
             sbank = new StringBuilder();
             sstatus = new StringBuilder();
 
-            kaartWaarde = new Dictionary<string, int>();
+            //kaartWaarde = new Dictionary<string, int>();
         }
         private void TimerDeelkaart_Tick(object sender, EventArgs e)
         {
             GeefKaart();
         }
-
         private void Klok_Tick(object sender, EventArgs e)
         {
-
             LblTijdstip.Content = DateTime.Now.ToLongTimeString();
-
         }
-
-
         private void Knoppen()
         {
-
             BtnHit.IsEnabled = false;
             BtnStand.IsEnabled = false;
             BtnDouble.IsEnabled = false;
         }
-
-
         private void GeefKaart()
 
         {
@@ -190,7 +162,6 @@ namespace Project_BlackJack_FTurkanKaya
 
             if (isSpeler == true)
             {
-
                 kaarten = kaart.Next(0, speelKaarten.Count);
                 ImageSpeler.Source = new BitmapImage(new Uri(kaartImage[speelKaarten[kaarten]], UriKind.Relative));
                 ImageSpeler.Visibility = Visibility.Visible;
@@ -199,10 +170,7 @@ namespace Project_BlackJack_FTurkanKaya
                 if (geenKaartSpeler == false)
                 {
                     gebruiktKaarten.Add(speelKaarten[kaarten]);
-
                 }
-
-
                 waarde = 0;
                 if (speelKaarten[kaarten].Contains("2"))
                 {
@@ -248,7 +216,6 @@ namespace Project_BlackJack_FTurkanKaya
                 {
                     waarde = 10;
                     somSpeler += waarde;
-
                 }
                 else if (speelKaarten[kaarten].Contains("Aas"))
                 {
@@ -256,21 +223,14 @@ namespace Project_BlackJack_FTurkanKaya
                     {
                         waarde = 11;
                         somSpeler += waarde;
-
-
                     }
-
                     else if (somSpeler > 10)
                     {
                         waarde = 1;
                         somSpeler += waarde;
-
                     }
-
                 }
-
                 isSpeler = false;
-
             }
             else if (isBank == true)
             {
@@ -281,7 +241,6 @@ namespace Project_BlackJack_FTurkanKaya
                 if (geenKaartSpeler == false)
                 {
                     gebruiktKaarten.Add(speelKaarten[kaarten]);
-
                 }
 
 
@@ -330,7 +289,6 @@ namespace Project_BlackJack_FTurkanKaya
                 {
                     waarde = 10;
                     somBank += waarde;
-
                 }
                 else if (speelKaarten[kaarten].Contains("Aas"))
                 {
@@ -338,28 +296,18 @@ namespace Project_BlackJack_FTurkanKaya
                     {
                         waarde = 11;
                         somBank += waarde;
-
-
                     }
-
                     else if (somBank > 10)
                     {
                         waarde = 1;
                         somBank += waarde;
-
                     }
-
                 }
-
                 isBank = false;
             }
-
-
         }
-
         private void Clear()
         {
-
             TxtInzet.Clear();
             sb.Clear();
             sbank.Clear();
@@ -372,9 +320,7 @@ namespace Project_BlackJack_FTurkanKaya
             gebruiktKaarten.Clear();
 
             waarde = 0;
-            speler1Waarde = 0;
-            hitWaarde = 0;
-            standWaarde = 0;
+            speler1Waarde = 0;           
             somBank = 0;
             somSpeler = 0;
             inzet = 0;
@@ -387,18 +333,12 @@ namespace Project_BlackJack_FTurkanKaya
             TxtInzet.IsEnabled = true;
             TxtKapitaal.IsEnabled = true;
             TxtInzet.Focus();
-            //isSpeler = true;
-            //isBank = true;
-
-
-
+          
             TxtScoreBank.Text = somBank.ToString();
             TxtScoreSpeler.Text = somSpeler.ToString();
             TxtResultaat.Text = "";
             TxtAantalkaarten.Text = "52";
-            //TxtAantalkaarten.Text = Convert.ToString(speelKaarten.Count);
-
-
+           
             TxtKapitaal.Text = kapitaal.ToString();
             TxtInzet.Text = "";
             ImageSpeler.Source = new BitmapImage(new Uri("/NewFolder/Speelkaarten.jpg", UriKind.Relative));
@@ -407,12 +347,9 @@ namespace Project_BlackJack_FTurkanKaya
             ImageBank.Visibility = Visibility.Visible;
             ImageDouble.Source = new BitmapImage(new Uri("/NewFolder/Speelkaarten.jpg", UriKind.Relative));
             ImageBank.Visibility = Visibility.Visible;
-
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
             BtnDeel.IsEnabled = true;
             BtnHit.IsEnabled = false;
             BtnStand.IsEnabled = false;
@@ -424,8 +361,6 @@ namespace Project_BlackJack_FTurkanKaya
             BtnDouble.IsEnabled = false;
             TxtAantalkaarten.Text = "52";
             TxtInzet.Focus();
-
-
         }
         private void Gewonnen()
         {
@@ -437,7 +372,6 @@ namespace Project_BlackJack_FTurkanKaya
             TxtKapitaal.Text = Convert.ToString(kapitaal);
 
             Knoppen();
-
         }
         private void Verloren()
         {
@@ -448,8 +382,6 @@ namespace Project_BlackJack_FTurkanKaya
             TxtKapitaal.Text = Convert.ToString(kapitaal);
 
             Knoppen();
-
-
         }
         private void Push()
         {
@@ -462,76 +394,56 @@ namespace Project_BlackJack_FTurkanKaya
         {
             if (somSpeler > 21 && somBank < 21)
             {
-                Verloren();
-              
+                Verloren();             
             }
             else if (somSpeler == 21)
             {
-                Gewonnen();
-               
+                Gewonnen();              
             }
         }
-
         private void LblStatus_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
             foreach (var status in kaartenHistoric)
             {
-
                 MessageBox.Show(status);
-
             }
-
         }
-
         private void Score()
         {
-
             if (somBank == 21 && somSpeler < 21)
             {
-                Verloren();
-              
+                Verloren();             
             }
             else if (somSpeler == 21 && somBank < 21)
             {
-                Gewonnen();
-               
+                Gewonnen();              
             }
-
             else if (somSpeler < 21 && somBank < 21)
             {
-
                 if (somSpeler > somBank)
                 {
                     Gewonnen();   
-                  
                 }
                 else if (somSpeler == somBank)
                 {
                     Push();
-
                 }
                 else if (somSpeler < somBank)
                 {
                     Verloren();
-                   
                 }
-
                 Knoppen();
             }
             else if (somBank > 21 && somSpeler < 21)
             {
-                Gewonnen();
-              
+                Gewonnen();          
             }
-
             else if (somSpeler == somBank)
             {
-                Push();
-              
+                Push();             
             }
-
         }
+       //************************************************  KAARTEN DELEN  ********************************************************************************************************
         private void BtnDeel_Click(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < soortKaart.Count; i++)
@@ -541,40 +453,31 @@ namespace Project_BlackJack_FTurkanKaya
                     string nieuweKaart = soortKaart[i] + " " + nummerKaart[x];
                     speelKaarten.Add(nieuweKaart);
                     KartenListBox.Items.Add(nieuweKaart);
-
                 }
             }
 
-
             kaartImage = new Dictionary<string, string>();
-
 
             for (int i = 0; i < kaartSource.Count; i++)
             {
                 kaartImage.Add(speelKaarten[i], kaartSource[i]);
             }
 
-
             BtnHit.IsEnabled = true;
             BtnStand.IsEnabled = true;
             TxtInzet.IsEnabled = false;
             TxtKapitaal.IsEnabled = false;
-
-
-            // TxtInzet.IsEnabled = true;
-
+         
             if (kapitaal == 0)
             {
                 MessageBox.Show("U hebt geen voldoende kapitaal. U kan niet verder spelen. ");
             }
             if (string.IsNullOrWhiteSpace(TxtInzet.Text))
             {
-
                 MessageBox.Show("U moest minimum inzet die 10% van het kapitaal is,bepalen.");
                 inzet = kapitaal * 10 / 100;
                 TxtInzet.Text = inzet.ToString();
             }
-
             else
             {
                 inzet = Convert.ToInt16(TxtInzet.Text);
@@ -584,9 +487,7 @@ namespace Project_BlackJack_FTurkanKaya
                     inzet = kapitaal * 10 / 100;
                     TxtInzet.Text = inzet.ToString();
                 }
-
             }
-
 
             SldKapitaal.Value = kapitaal;
             TxtInzet.Text = inzet.ToString();
@@ -594,9 +495,7 @@ namespace Project_BlackJack_FTurkanKaya
             TxtKapitaal.Text = Convert.ToString(kapitaal);
 
             TxtInzet.Text = Convert.ToString(inzet);
-
-            //LbxSpeler.Items.Clear();
-
+          
             isSpeler = true;
             isBank = false;
             GeefKaart();
@@ -605,10 +504,12 @@ namespace Project_BlackJack_FTurkanKaya
 
             KartenListBox.Items.Remove(speelKaarten[kaarten]);
             speelKaarten.Remove(speelKaarten[kaarten]);
-
-            //somSpeler += waarde;
-
+           
             speler1 = kaart.Next(0, speelKaarten.Count);
+
+            ImageSpeler.Source = new BitmapImage(new Uri(kaartImage[speelKaarten[speler1]], UriKind.Relative));
+            ImageSpeler.Visibility = Visibility.Visible;
+
             speler1Waarde = 0;
             if (speelKaarten[speler1].Contains("2"))
             {
@@ -662,28 +563,28 @@ namespace Project_BlackJack_FTurkanKaya
                 {
                     speler1Waarde = 11;
                     somSpeler += speler1Waarde;
-
-
                 }
-
                 else if (somSpeler > 10)
                 {
                     speler1Waarde = 1;
                     somSpeler += speler1Waarde;
-
                 }
             }
 
-
-
             LbxSpeler.Items.Add(speelKaarten[speler1]);
             TxtScoreSpeler.Text = somSpeler.ToString();
+
+            geenKaartSpeler = gebruiktKaarten.Contains(speelKaarten[speler1]);
+
+            if (geenKaartSpeler == false)
+            {
+                gebruiktKaarten.Add(speelKaarten[speler1]);
+            }
 
             KartenListBox.Items.Remove(speelKaarten[speler1]);
             speelKaarten.Remove(speelKaarten[speler1]);
             aantalKaarten = speelKaarten.Count;
             TxtAantalkaarten.Text = aantalKaarten.ToString();
-
 
             // ***********************************************  BANK KAARTEN  *********************************************************************
 
@@ -693,14 +594,12 @@ namespace Project_BlackJack_FTurkanKaya
             GeefKaart();
             ImageBank.Source = new BitmapImage(new Uri(kaartImage[speelKaarten[kaarten]], UriKind.Relative));
             ImageBank.Visibility = Visibility.Visible;
-
-            //sb.AppendLine($"{speelKaarten[kaarten]}");
+           
             LbxBank.Items.Add(speelKaarten[kaarten]);
             TxtScoreBank.Text = somBank.ToString();
 
             KartenListBox.Items.Remove(speelKaarten[kaarten]);
             speelKaarten.Remove(speelKaarten[kaarten]);
-
 
             aantalKaarten = speelKaarten.Count;
             TxtAantalkaarten.Text = aantalKaarten.ToString();
@@ -711,20 +610,14 @@ namespace Project_BlackJack_FTurkanKaya
             {
                 BtnDouble.IsEnabled = true;
             }
-            /*
-            else if (somSpeler == 0 && inzet * 2 >= kapitaal)
-            {
-                MessageBox.Show("De Double Down button niet beshickbaar");
-                BtnDouble.IsEnabled = false;
-            }
-            */
+          
             BtnDeel.IsEnabled = false;
-
         }
+
         //**************************************************  DOUBLE DOWN   *****************************************************************
+        
         private void BtnDouble_Click(object sender, RoutedEventArgs e)
         {
-
             isSpeler = false;
             isBank = true;
             GeefKaart();
@@ -766,7 +659,6 @@ namespace Project_BlackJack_FTurkanKaya
             TxtAantalkaarten.Text = aantalKaarten.ToString();
 
             ScoreSpeler();
-
         }
 
         private void BtnStand_Click(object sender, RoutedEventArgs e)
@@ -781,13 +673,11 @@ namespace Project_BlackJack_FTurkanKaya
                     GeefKaart();
                     sbank.AppendLine($"{speelKaarten[kaarten]}");
                    
-
                 } while (somBank < 16);
 
                 if (somBank >= 16)
                 {
                     isBank = false;
-
                 }
                 LbxBank.Items.Add(sbank);
             }
@@ -823,11 +713,11 @@ namespace Project_BlackJack_FTurkanKaya
                 kaartenHistoric.Remove(kaartenHistoric[0]);
             }
 
-
             LblStatus.Content = sstatus.ToString();
 
 
-            // ****************SHUFFLE DE DECK******************************************************************
+            // ***********************************************************  SHUFFLE DE DECK  ******************************************************************
+
 
             MessageBox.Show("Het deck geschud wordt");
 
@@ -839,9 +729,7 @@ namespace Project_BlackJack_FTurkanKaya
                 speelKaarten[i] = speelKaarten[nieuweDeck];
                 speelKaarten[nieuweDeck] = temp;
             }
-
             Clear();
-
         }
     }
 }
